@@ -37,6 +37,10 @@ public class DashboardActivity extends Activity {
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
+//Keep open expandable list view
+        int count = listAdapter.getGroupCount();
+        for ( int i = 0; i < count; i++ )
+            expListView.expandGroup(i);
 
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
